@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body{
+  max-width: 100%;
+}
+.child {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.child1 {
+  background-color: aqua;
+  border: 1px solid red;
+}
+.child2 {
+  background-color: greenyellow;
+  border: 1px solid red;
+}
+.child3 {
+  background-color: lightcyan;
+  border: 1px solid red;
+}
+.custom-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #29b6f6;
+  cursor: pointer;
+}
+
+.custom-handle-se {
+  bottom: 0;
+  right: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .child {
+    font-size: 14px;
+    padding: 5px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@layer utilities {
+  .important-width {
+    width: 30% !important;
+  }
+}
